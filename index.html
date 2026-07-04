@@ -125,7 +125,7 @@
   <header>
     <span class="eyebrow">FormaX</span>
     <h1>Política de Privacidad</h1>
-    <p class="updated">Última actualización: 28 de junio de 2026</p>
+    <p class="updated">Última actualización: 4 de julio de 2026</p>
   </header>
 
   <p class="intro">Esta Política de Privacidad describe cómo <strong>José C. Frías</strong>
@@ -177,7 +177,19 @@
     <li>Un <strong>token de notificaciones</strong> (Firebase Cloud Messaging) si activas los
     recordatorios.</li>
   </ul>
-  <p>No recopilamos tu ubicación, tu lista de contactos, ni accedemos a la cámara o el micrófono.</p>
+
+  <h3>d) Fotos de comida (escaneo con IA — función premium)</h3>
+  <p>Si usas la función <strong>Escanear comida</strong> (disponible durante el periodo de prueba y
+  con suscripción activa), puedes <strong>tomar una foto con la cámara o elegir una imagen de tu
+  galería</strong>. Esa imagen se reduce de tamaño y se envía a nuestro proveedor de IA
+  (<strong>Anthropic</strong>, modelo Claude), a través de nuestro servidor intermediario, para
+  estimar sus calorías y macronutrientes y darte un veredicto según tu meta.</p>
+  <blockquote><p><strong>La foto NO se almacena.</strong> No la guardamos en nuestros servidores ni
+  en nuestra base de datos, y Anthropic <strong>no la utiliza para entrenar sus modelos</strong>. La
+  imagen se procesa en el momento únicamente para generar el análisis, que se te muestra en
+  pantalla.</p></blockquote>
+  <p>No recopilamos tu ubicación ni tu lista de contactos, y <strong>no accedemos al micrófono</strong>.
+  Solo usamos la cámara o la galería cuando tú lo eliges para escanear una comida (ver apartado d).</p>
 
   <hr>
 
@@ -187,6 +199,9 @@
     <li>Crear y autenticar tu cuenta y verificar tu correo electrónico.</li>
     <li><strong>Generar planes de entrenamiento y dieta personalizados con inteligencia
     artificial.</strong></li>
+    <li><strong>Analizar las fotos de comida que decidas escanear</strong> para estimar calorías y
+    macros y darte un veredicto según tu meta (función premium; la foto no se almacena — ver
+    apartado 1.d).</li>
     <li>Calcular la progresión de carga, el IMC y las recomendaciones de sueño.</li>
     <li>Mostrarte tu progreso e historial dentro de la App.</li>
     <li>Gestionar tu periodo de prueba, tu cuota gratuita y tu suscripción.</li>
@@ -201,6 +216,9 @@
   servidor intermediario (un <em>Cloudflare Worker</em>) que añade la autenticación y reenvía la
   solicitud. <strong>No se utilizan para entrenar modelos de IA</strong> y se procesan solo para
   producir tu plan.</p>
+  <p>Si usas la función de <strong>escaneo de comida</strong>, también enviamos a Anthropic la
+  <strong>foto</strong> que elijas, exclusivamente para analizarla en ese momento. <strong>La foto no
+  se almacena</strong> y tampoco se usa para entrenar modelos (ver apartado 1.d).</p>
   <blockquote><p>Los planes generados son orientativos y <strong>no constituyen consejo, diagnóstico
   ni tratamiento médico</strong>. Consulta a un profesional de la salud antes de iniciar cualquier
   programa de ejercicio o nutrición, especialmente si tienes condiciones médicas.</p></blockquote>
@@ -216,7 +234,7 @@
     </thead>
     <tbody>
       <tr><td>Google Firebase</td><td>Cuenta, base de datos y notificaciones (Authentication, Cloud Firestore, Cloud Messaging)</td><td>Cuenta, datos de salud y actividad</td></tr>
-      <tr><td>Anthropic</td><td>Generación de planes con IA (API de Claude)</td><td>Datos del plan y exámenes (si los das)</td></tr>
+      <tr><td>Anthropic</td><td>Generación de planes con IA y análisis de fotos de comida (API de Claude)</td><td>Datos del plan y exámenes (si los das); <strong>fotos de comida</strong> que escanees (no se almacenan)</td></tr>
       <tr><td>Cloudflare</td><td>Servidor intermediario que enruta las solicitudes a la IA</td><td>Tránsito de la solicitud</td></tr>
       <tr><td>Google Play (Billing)</td><td>Procesamiento de suscripciones</td><td>Datos de la transacción</td></tr>
       <tr><td>Pexels</td><td>Búsqueda de fotos de comida ilustrativas</td><td>Solo el texto de búsqueda en inglés; <span class="tag">ningún dato personal</span></td></tr>
@@ -239,7 +257,10 @@
   <ul>
     <li><strong>Editar</strong> tus datos de peso, exámenes y preferencias dentro de la App en
     cualquier momento.</li>
-    <li><strong>Solicitar la eliminación de tu cuenta y de todos tus datos</strong> escribiendo a
+    <li><strong>Eliminar tu cuenta directamente desde la App</strong> (Perfil &rarr; "Eliminar mi
+    cuenta"): esto borra de forma permanente tu cuenta de acceso y <strong>todos tus datos</strong>
+    de nuestra base de datos.</li>
+    <li>Alternativamente, <strong>solicitar la eliminación</strong> escribiendo a
     <a href="mailto:jcfrias96@gmail.com">jcfrias96@gmail.com</a> desde el correo asociado a tu cuenta.
     Procesaremos la solicitud en un plazo razonable y eliminaremos tu información de nuestra base de
     datos.</li>
