@@ -125,7 +125,7 @@
   <header>
     <span class="eyebrow">FormaX</span>
     <h1>Política de Privacidad</h1>
-    <p class="updated">Última actualización: 4 de julio de 2026</p>
+    <p class="updated">Última actualización: 11 de octubre de 2026</p>
   </header>
 
   <p class="intro">Esta Política de Privacidad describe cómo <strong>José C. Frías</strong>
@@ -154,11 +154,14 @@
   <h3>b) Datos de salud y actividad física (sensibles)</h3>
   <p>Estos datos los introduces tú voluntariamente y los usamos para personalizar tus planes:</p>
   <ul>
-    <li><strong>Peso actual y objetivo, altura y edad.</strong> (La App <strong>no</strong> solicita
-    tu sexo.)</li>
+    <li><strong>Peso actual y objetivo, altura y edad.</strong></li>
+    <li><strong>Sexo</strong> (hombre o mujer). Se te pide al crear la cuenta y se usa para ajustar
+    el plan de entrenamiento y las necesidades calóricas, que difieren de forma relevante.</li>
     <li><strong>Índice de Masa Corporal (IMC)</strong> calculado a partir de tu peso y altura.</li>
     <li><strong>Meta de entrenamiento, nivel y disponibilidad</strong> (días por semana,
     equipamiento).</li>
+    <li><strong>Enfoque muscular</strong>, si lo eliges: los grupos que quieres priorizar (pecho,
+    espalda, piernas, glúteos, hombros, brazos, abdomen) y con cuánta intensidad.</li>
     <li><strong>Registros de entrenamiento</strong> (ejercicios, series, repeticiones, fechas).</li>
     <li><strong>Registros de sueño</strong> y <strong>registros de peso corporal</strong> a lo largo
     del tiempo.</li>
@@ -188,6 +191,23 @@
   en nuestra base de datos, y Anthropic <strong>no la utiliza para entrenar sus modelos</strong>. La
   imagen se procesa en el momento únicamente para generar el análisis, que se te muestra en
   pantalla.</p></blockquote>
+  <h3>e) Datos de diagnóstico y uso</h3>
+  <p>Para saber si la App falla y cómo se usa, empleamos dos servicios de Google Firebase:</p>
+  <ul>
+    <li><strong>Firebase Crashlytics</strong> (informes de fallos): si la App se cierra
+    inesperadamente, recibimos un informe técnico con el punto del código donde ocurrió, el
+    <strong>modelo de dispositivo</strong>, la <strong>versión de Android</strong> y el momento del
+    fallo. Nos permite corregir errores que no podemos reproducir.</li>
+    <li><strong>Firebase Analytics</strong> (estadísticas de uso): registramos <strong>acciones
+    anónimas</strong> dentro de la App —por ejemplo, que se completó un registro, que se generó un
+    plan o que se abrió la pantalla de suscripción— junto con un <strong>identificador aleatorio de
+    la instalación</strong>, el modelo de dispositivo y el <strong>país aproximado</strong>
+    (deducido de la dirección IP).</li>
+  </ul>
+  <blockquote><p>Estos datos <strong>no incluyen tu nombre, tu correo, tus exámenes médicos ni tus
+  fotos de comida</strong>, y <strong>no se usan para publicidad</strong>: los utilizamos únicamente
+  para corregir fallos y mejorar la App.</p></blockquote>
+
   <p>No recopilamos tu ubicación ni tu lista de contactos, y <strong>no accedemos al micrófono</strong>.
   Solo usamos la cámara o la galería cuando tú lo eliges para escanear una comida (ver apartado d).</p>
 
@@ -211,8 +231,9 @@
 
   <h3>Procesamiento por inteligencia artificial</h3>
   <p>Para generar tus planes, enviamos a nuestro proveedor de IA (<strong>Anthropic</strong>, modelo
-  Claude) los datos necesarios para personalizar el plan: tu meta, nivel, peso/altura, IMC y,
-  <strong>si los proporcionas</strong>, tus exámenes médicos. Estos datos viajan a través de nuestro
+  Claude) los datos necesarios para personalizar el plan: tu meta, nivel, disponibilidad,
+  peso/altura, edad, sexo, IMC y, <strong>si los proporcionas</strong>, tu enfoque muscular y tus
+  exámenes médicos. Estos datos viajan a través de nuestro
   servidor intermediario (un <em>Cloudflare Worker</em>) que añade la autenticación y reenvía la
   solicitud. <strong>No se utilizan para entrenar modelos de IA</strong> y se procesan solo para
   producir tu plan.</p>
@@ -234,6 +255,7 @@
     </thead>
     <tbody>
       <tr><td>Google Firebase</td><td>Cuenta, base de datos y notificaciones (Authentication, Cloud Firestore, Cloud Messaging)</td><td>Cuenta, datos de salud y actividad</td></tr>
+      <tr><td>Google Firebase</td><td>Informes de fallos y estadísticas de uso (Crashlytics, Analytics)</td><td>Diagnóstico técnico y acciones anónimas dentro de la App (ver apartado 1.e)</td></tr>
       <tr><td>Anthropic</td><td>Generación de planes con IA y análisis de fotos de comida (API de Claude)</td><td>Datos del plan y exámenes (si los das); <strong>fotos de comida</strong> que escanees (no se almacenan)</td></tr>
       <tr><td>Cloudflare</td><td>Servidor intermediario que enruta las solicitudes a la IA</td><td>Tránsito de la solicitud</td></tr>
       <tr><td>Google Play (Billing)</td><td>Procesamiento de suscripciones</td><td>Datos de la transacción</td></tr>
