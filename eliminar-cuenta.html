@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eliminar tu cuenta — FormaX</title>
+<meta name="description" content="Cómo eliminar tu cuenta de FormaX y todos tus datos, qué se borra y qué se conserva.">
+<style>
+  :root {
+    --bg: #101114; --surface: #17191D; --surface2: #1E2128; --line: #2A2E36;
+    --red: #E5484D; --red-soft: rgba(229, 72, 77, 0.12);
+    --text: #ECEEF2; --text2: #9AA0A9; --text3: #686D76; --good: #5BB873;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.65; font-size: 16px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px 80px; }
+  header { border-bottom: 1px solid var(--line); padding: 48px 0 28px; margin-bottom: 32px; }
+  .eyebrow {
+    display: inline-block; font-size: 12px; letter-spacing: 1.4px; text-transform: uppercase;
+    color: var(--red); font-weight: 700; background: var(--red-soft); padding: 5px 12px; border-radius: 999px;
+  }
+  h1 { font-size: clamp(28px, 6vw, 40px); line-height: 1.15; margin: 18px 0 8px; letter-spacing: -0.5px; font-weight: 800; }
+  .updated { color: var(--text3); font-size: 14px; margin: 0; }
+  h2 { font-size: 21px; margin: 40px 0 12px; padding-top: 8px; font-weight: 700; letter-spacing: -0.2px; }
+  h2 .num { color: var(--red); margin-right: 8px; }
+  p, li { color: var(--text2); }
+  p { margin: 12px 0; }
+  strong { color: var(--text); font-weight: 600; }
+  a { color: var(--red); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  ul, ol { padding-left: 22px; margin: 12px 0; }
+  li { margin: 7px 0; }
+  hr { border: none; border-top: 1px solid var(--line); margin: 36px 0; }
+  .intro { font-size: 17px; color: var(--text); }
+  .steps {
+    background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--red);
+    border-radius: 12px; padding: 14px 20px 14px 20px; margin: 18px 0;
+  }
+  .steps h2 { margin-top: 8px; }
+  footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--text3); font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="eyebrow">FormaX</span>
+    <h1>Eliminar tu cuenta y tus datos</h1>
+    <p class="updated">Última actualización: 20 de octubre de 2026</p>
+  </header>
+
+  <p class="intro">Esta página explica cómo eliminar tu cuenta de la aplicación <strong>FormaX</strong>
+  (desarrollador: <strong>José C. Frías</strong>) y qué ocurre con tus datos.</p>
+
+  <div class="steps">
+    <h2><span class="num">1.</span>Desde la app (inmediato)</h2>
+    <ol>
+      <li>Abre FormaX e inicia sesión.</li>
+      <li>Ve a <strong>Perfil</strong>.</li>
+      <li>Toca <strong>"Eliminar mi cuenta"</strong> y confirma.</li>
+    </ol>
+    <p>Tu cuenta y tus datos se borran <strong>en ese momento</strong> y de forma permanente.</p>
+  </div>
+
+  <div class="steps">
+    <h2><span class="num">2.</span>Por correo (si ya no tienes la app)</h2>
+    <p>Escribe a <a href="mailto:jcfrias96@gmail.com?subject=Eliminar%20mi%20cuenta%20de%20FormaX">jcfrias96@gmail.com</a>
+    con el asunto <strong>"Eliminar mi cuenta de FormaX"</strong>, desde el correo con el que te
+    registraste. Eliminaremos tu cuenta y tus datos en un plazo máximo de <strong>30 días</strong> y te
+    confirmaremos por correo.</p>
+  </div>
+
+  <hr>
+
+  <h2><span class="num">3.</span>Qué se elimina</h2>
+  <ul>
+    <li>Tu cuenta de acceso (correo y contraseña).</li>
+    <li>Tu perfil: nombre, sexo, edad, peso, altura, metas y exámenes médicos que hayas ingresado.</li>
+    <li>Tus planes de entrenamiento y alimentación.</li>
+    <li>Tus registros de entrenamiento, sueño, peso y comidas escaneadas.</li>
+    <li>El estado de tu suscripción guardado por FormaX y tus contadores de uso.</li>
+    <li>Los comentarios y reportes que hayas enviado.</li>
+    <li>El identificador de notificaciones de tu teléfono.</li>
+  </ul>
+  <p>Las fotos del escaneo de comida <strong>nunca se guardan</strong>: se analizan en el momento y se
+  descartan.</p>
+
+  <h2><span class="num">4.</span>Qué se conserva y por cuánto tiempo</h2>
+  <ul>
+    <li><strong>Registros de fallos de la app</strong> (Firebase Crashlytics): se borran
+    automáticamente a los <strong>90 días</strong>.</li>
+    <li><strong>Estadísticas de uso</strong> (Firebase Analytics), que no incluyen tu nombre ni tu
+    correo: se borran automáticamente según los plazos de Google, como máximo a los
+    <strong>14 meses</strong>.</li>
+    <li><strong>Tu historial de compras en Google Play</strong>: lo guarda Google, no FormaX, según su
+    propia política. Eliminar tu cuenta de FormaX <strong>no cancela</strong> una suscripción activa:
+    cancélala en Google Play → Pagos y suscripciones.</li>
+  </ul>
+
+  <footer>
+    Más información en nuestra <a href="https://jcfrias96-eng.github.io/formax-privacy/">Política de
+    Privacidad</a>.
+  </footer>
+</div>
+</body>
+</html>
